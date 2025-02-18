@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid & Flexbox Layout</title>
+<style>
+    body{
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+        margin: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius:5px;
+    }
+    .flex-container {
+        display: flex;
+        border-radius: 20px;
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 100%;
+    }
+    .flex-container .box {
+        margin: 10px;
+        background-color: rgb(210, 218, 221);
+        padding: 60px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+</style>
+</head>
+<body>
+
+<h1>Responsive Image Gallery (CSS Grid)</h1>
+
+<div class="gallery">
+<img src="image.jpg" alt= "Gallery Image">
+<img src="image.jpg" alt= "Gallery Image">
+<img src="image.jpg" alt= "Gallery Image">
+<img src="image.jpg" alt= "Gallery Image">
+<img src="image.jpg" alt= "Gallery Image">
+<img src="image.jpg" alt= "Gallery Image">
+</div>
+
+<h1>Responsive Flexbox Layout</h1>
+<div class="flex-container">
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+</div>
+</body>
+</html>
